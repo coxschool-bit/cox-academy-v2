@@ -1,1 +1,1 @@
-# Homeschool App
+# cox-academy-v2
