@@ -1,0 +1,50 @@
+extend type Assignment {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "Assignment", purpose: IMPLICIT_KEY_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Assignment`.`student`. It must match the value of `Student`.`id`. See `@ref` for how to customize it.
+  """
+  studentId: UUID! @fdc_generated(from: "Assignment.student", purpose: IMPLICIT_REF_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Assignment`.`subject`. It must match the value of `Subject`.`id`. See `@ref` for how to customize it.
+  """
+  subjectId: UUID! @fdc_generated(from: "Assignment.subject", purpose: IMPLICIT_REF_FIELD)
+}
+extend type AttendanceLog {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "AttendanceLog", purpose: IMPLICIT_KEY_FIELD)
+  """
+  ✨ Implicit foreign key field based on `AttendanceLog`.`family`. It must match the value of `Family`.`id`. See `@ref` for how to customize it.
+  """
+  familyId: UUID! @fdc_generated(from: "AttendanceLog.family", purpose: IMPLICIT_REF_FIELD)
+}
+extend type Family {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "Family", purpose: IMPLICIT_KEY_FIELD)
+}
+extend type Student {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "Student", purpose: IMPLICIT_KEY_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Student`.`family`. It must match the value of `Family`.`id`. See `@ref` for how to customize it.
+  """
+  familyId: UUID! @fdc_generated(from: "Student.family", purpose: IMPLICIT_REF_FIELD)
+}
+extend type Subject {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "Subject", purpose: IMPLICIT_KEY_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Subject`.`family`. It must match the value of `Family`.`id`. See `@ref` for how to customize it.
+  """
+  familyId: UUID! @fdc_generated(from: "Subject.family", purpose: IMPLICIT_REF_FIELD)
+}
