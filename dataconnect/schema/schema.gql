@@ -1,0 +1,34 @@
+type Family @table {
+  name: String!
+  subscriptionTier: String!
+  createdAt: Timestamp
+}
+
+type Student @table {
+  name: String!
+  birthDate: Date!
+  family: Family!
+}
+
+type Subject @table {
+  title: String!
+  colorCode: String!
+  family: Family!
+}
+
+type Assignment @table {
+  title: String!
+  dueDate: Date!
+  status: String!
+  description: String
+  gradeReceived: Float
+  student: Student!
+  subject: Subject!
+}
+
+type AttendanceLog @table {
+  date: Date!
+  totalHours: Float!
+  notes: String
+  family: Family!
+}
