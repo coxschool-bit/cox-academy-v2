@@ -1,34 +1,48 @@
-type Family @table {
+type Household @table {
+  id: UUID! @default(expr: "uuidV4()")
   name: String!
   subscriptionTier: String!
-  createdAt: Timestamp
+  # Bonus: Automatically populate the creation time on the server!
+  createdAt: Timestamp! @default(expr: "request.time") 
 }
 
-type Student @table {
+type User @table {
+  id: String! @default(expr: "auth.uid")
+  email: String!
   name: String!
-  birthDate: Date!
-  family: Family!
+  role: String! # "PARENT", "STUDENT", "TEACHER", "ADMIN"
+  household: Household # Relates directly to the Household table (nullable)
+  gradeLevel: String # Null for parents, teachers, and admins
 }
 
-type Subject @table {
-  title: String!
-  colorCode: String!
-  family: Family!
+type Class @table {
+  id: UUID! @default(expr: "uuidV4()")
+  name: String!
+  subject: String!
+  color: String! @default(value: "#4F46E5")
+  teacher: User! # Changed to User object relation (auto-generates teacherId)
+}
+
+type Enrollment @table {
+  id: UUID! @default(expr: "uuidV4()")
+  student: User! # Changed to User object relation (auto-generates studentId)
+  class: Class!
 }
 
 type Assignment @table {
+  id: UUID! @default(expr: "uuidV4()")
   title: String!
+  instruction: String # Nullable is perfect here!
   dueDate: Date!
-  status: String!
-  description: String
-  gradeReceived: Float
-  student: Student!
-  subject: Subject!
+  class: Class!
 }
 
-type AttendanceLog @table {
-  date: Date!
-  totalHours: Float!
-  notes: String
-  family: Family!
+type Submission @table {
+  id: UUID! @default(expr: "uuidV4()")
+  student: User! # Changed to User object relation (auto-generates studentId)
+  assignment: Assignment!
+  status: String! @default(value: "ASSIGNED")
+  fileUrl: String
+  grade: String
+  feedback: String
 }

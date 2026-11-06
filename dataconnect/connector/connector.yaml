@@ -1,0 +1,6 @@
+connectorId: "homeschool-connector"
+generate:
+  javascriptSdk:
+    package: "@firebasegen/homeschool-connector-connector"
+    outputDir: "../../src/generated/dataconnect"
+    packageJsonDir: "../../"

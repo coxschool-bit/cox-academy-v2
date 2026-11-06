@@ -1,0 +1,48 @@
+# dataconnect/connector/operations.gql
+
+# 1. Fetch the currently logged-in user's profile and family details
+query GetCurrentUser @auth(level: USER) {
+  user(key: { id: "auth.uid" }) {
+    id email name role gradeLevel
+    household { id name subscriptionTier }
+  }
+}
+
+# 2. Get all classes a student is currently enrolled in
+query GetMyEnrollments($studentId: String!) @auth(level: USER) {
+  enrollments(where: { studentId: { eq: $studentId } }) {
+    class { id name subject color }
+  }
+}
+
+# 3. Get all assignments for a specific class
+query GetClassAssignments($classId: UUID!) @auth(level: USER) {
+  assignments(where: { classId: { eq: $classId } }) {
+    id title instruction dueDate
+  }
+}
+
+# 4. Create a new core User record (run right after signing up)
+mutation CreateUser($email: String!, $name: String!, $role: String!, $householdId: UUID, $gradeLevel: String) @auth(level: USER) {
+  user_insert(data: { email: $email, name: $name, role: $role, householdId: $householdId, gradeLevel: $gradeLevel })
+}
+
+# 5. Create a new Class (Instructors only)
+mutation CreateClass($name: String!, $subject: String!, $color: String, $teacherId: String!) @auth(level: USER) {
+  class_insert(data: { name: $name, subject: $subject, color: $color, teacherId: $teacherId })
+}
+
+# 6. Create a new Assignment inside a Class
+mutation CreateAssignment($title: String!, $instruction: String, $dueDate: Date!, $classId: UUID!) @auth(level: USER) {
+  assignment_insert(data: { title: $title, instruction: $instruction, dueDate: $dueDate, classId: $classId })
+}
+
+# 7. Submit homework with a Cloud Storage attachment (Student)
+mutation SubmitAssignment($submissionId: UUID!, $fileUrl: String!) @auth(level: USER) {
+  submission_update(key: { id: $submissionId }, data: { status: "SUBMITTED", fileUrl: $fileUrl })
+}
+
+# 8. Grade a homework submission with feedback (Teacher or Parent)
+mutation GradeSubmission($submissionId: UUID!, $grade: String!, $feedback: String!) @auth(level: USER) {
+  submission_update(key: { id: $submissionId }, data: { status: "GRADED", grade: $grade, feedback: $feedback })
+}

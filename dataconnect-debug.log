@@ -1,0 +1,11 @@
+I1105 23:56:03.350588   31940 load.go:31] Reloading schema and connectors...
+I1105 23:56:03.394651   31940 control.go:92] [projects/emulator/locations/emulator/services/cox-academy-v2 b862] UpdateResources(): done
+Main schema: sources: schema/schema.gql [1341B] 
+Connector "homeschool-connector": sources: connector/operations.gql [2128B] 
+I1105 23:56:03.457934   31940 codegen.go:102] [connector "homeschool-connector" javascriptSdk] Generating sources into "D:\\cox-academy-v2\\src\\generated\\dataconnect"
+I1105 23:56:03.491818   31940 collector.go:107] schema extensions wrote into "D:\\cox-academy-v2\\dataconnect\\.dataconnect\\schema"
+Generated sources: prelude.gql [94415B] main\implicit.gql [1838B] main\input.gql [44852B] main\relation.gql [20682B] main\query.gql [7751B] main\mutation.gql [20845B] 
+I1105 23:56:03.531407   31940 collector.go:107] connector "homeschool-connector" javascriptSdk wrote into "D:\\cox-academy-v2\\src\\generated\\dataconnect"
+Generated sources: .guides/config.json [236B] index.d.ts [8354B] esm\index.esm.js [4783B] esm\package.json [17B] package.json [649B] README.md [41017B] .guides/usage.md [1855B] index.cjs.js [5319B] .guides/setup.md [605B] 
+I1105 23:56:03.567550   31940 installsdk.go:55] Package @firebasegen/homeschool-connector-connector is already installed. Skipping installation
+I1105 23:56:03.567550   31940 load.go:109] Finished reloading

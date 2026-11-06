@@ -19,9 +19,9 @@ extend type Query {
     first: Assignment_FirstRow
   ): Assignment @fdc_generated(from: "Assignment", purpose: QUERY_SINGLE)
   """
-  ✨ Look up a single `AttendanceLog` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  ✨ Look up a single `Class` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
   """
-  attendanceLog(
+  class(
     """
     The unique ID of the object.
     """
@@ -30,17 +30,17 @@ extend type Query {
     """
     The key used to identify the object.
     """
-    key: AttendanceLog_Key
+    key: Class_Key
 
     """
     Fetch the first row based on the filters and ordering.
     """
-    first: AttendanceLog_FirstRow
-  ): AttendanceLog @fdc_generated(from: "AttendanceLog", purpose: QUERY_SINGLE)
+    first: Class_FirstRow
+  ): Class @fdc_generated(from: "Class", purpose: QUERY_SINGLE)
   """
-  ✨ Look up a single `Family` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  ✨ Look up a single `Enrollment` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
   """
-  family(
+  enrollment(
     """
     The unique ID of the object.
     """
@@ -49,17 +49,17 @@ extend type Query {
     """
     The key used to identify the object.
     """
-    key: Family_Key
+    key: Enrollment_Key
 
     """
     Fetch the first row based on the filters and ordering.
     """
-    first: Family_FirstRow
-  ): Family @fdc_generated(from: "Family", purpose: QUERY_SINGLE)
+    first: Enrollment_FirstRow
+  ): Enrollment @fdc_generated(from: "Enrollment", purpose: QUERY_SINGLE)
   """
-  ✨ Look up a single `Student` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  ✨ Look up a single `Household` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
   """
-  student(
+  household(
     """
     The unique ID of the object.
     """
@@ -68,17 +68,17 @@ extend type Query {
     """
     The key used to identify the object.
     """
-    key: Student_Key
+    key: Household_Key
 
     """
     Fetch the first row based on the filters and ordering.
     """
-    first: Student_FirstRow
-  ): Student @fdc_generated(from: "Student", purpose: QUERY_SINGLE)
+    first: Household_FirstRow
+  ): Household @fdc_generated(from: "Household", purpose: QUERY_SINGLE)
   """
-  ✨ Look up a single `Subject` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  ✨ Look up a single `Submission` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
   """
-  subject(
+  submission(
     """
     The unique ID of the object.
     """
@@ -87,13 +87,37 @@ extend type Query {
     """
     The key used to identify the object.
     """
-    key: Subject_Key
+    key: Submission_Key
 
     """
     Fetch the first row based on the filters and ordering.
     """
-    first: Subject_FirstRow
-  ): Subject @fdc_generated(from: "Subject", purpose: QUERY_SINGLE)
+    first: Submission_FirstRow
+  ): Submission @fdc_generated(from: "Submission", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `User` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  user(
+    """
+    The unique ID of the object.
+    """
+    id: String
+
+    """
+    ✨ `_expr` server value variant of `id` (The unique ID of the object.)
+    """
+    id_expr: String_Expr
+
+    """
+    The key used to identify the object.
+    """
+    key: User_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: User_FirstRow
+  ): User @fdc_generated(from: "User", purpose: QUERY_SINGLE)
   """
   ✨ List `Assignment` objects in the table and return selected fields, optionally filtered by `where` conditions
   """
@@ -129,18 +153,18 @@ extend type Query {
     having: Assignment_Having
   ): [Assignment!]! @fdc_generated(from: "Assignment", purpose: QUERY_MULTIPLE)
   """
-  ✨ List `AttendanceLog` objects in the table and return selected fields, optionally filtered by `where` conditions
+  ✨ List `Class` objects in the table and return selected fields, optionally filtered by `where` conditions
   """
-  attendanceLogs(
+  classes(
     """
     Filter condition to narrow down the query results.
     """
-    where: AttendanceLog_Filter
+    where: Class_Filter
 
     """
     Order the query results by specific fields.
     """
-    orderBy: [AttendanceLog_Order!]
+    orderBy: [Class_Order!]
 
     """
     Number of rows to skip before starting to return the results.
@@ -160,21 +184,21 @@ extend type Query {
     """
     Filter condition to apply to the groups of aggregate queries.
     """
-    having: AttendanceLog_Having
-  ): [AttendanceLog!]! @fdc_generated(from: "AttendanceLog", purpose: QUERY_MULTIPLE)
+    having: Class_Having
+  ): [Class!]! @fdc_generated(from: "Class", purpose: QUERY_MULTIPLE)
   """
-  ✨ List `Family` objects in the table and return selected fields, optionally filtered by `where` conditions
+  ✨ List `Enrollment` objects in the table and return selected fields, optionally filtered by `where` conditions
   """
-  families(
+  enrollments(
     """
     Filter condition to narrow down the query results.
     """
-    where: Family_Filter
+    where: Enrollment_Filter
 
     """
     Order the query results by specific fields.
     """
-    orderBy: [Family_Order!]
+    orderBy: [Enrollment_Order!]
 
     """
     Number of rows to skip before starting to return the results.
@@ -194,21 +218,21 @@ extend type Query {
     """
     Filter condition to apply to the groups of aggregate queries.
     """
-    having: Family_Having
-  ): [Family!]! @fdc_generated(from: "Family", purpose: QUERY_MULTIPLE)
+    having: Enrollment_Having
+  ): [Enrollment!]! @fdc_generated(from: "Enrollment", purpose: QUERY_MULTIPLE)
   """
-  ✨ List `Student` objects in the table and return selected fields, optionally filtered by `where` conditions
+  ✨ List `Household` objects in the table and return selected fields, optionally filtered by `where` conditions
   """
-  students(
+  households(
     """
     Filter condition to narrow down the query results.
     """
-    where: Student_Filter
+    where: Household_Filter
 
     """
     Order the query results by specific fields.
     """
-    orderBy: [Student_Order!]
+    orderBy: [Household_Order!]
 
     """
     Number of rows to skip before starting to return the results.
@@ -228,21 +252,21 @@ extend type Query {
     """
     Filter condition to apply to the groups of aggregate queries.
     """
-    having: Student_Having
-  ): [Student!]! @fdc_generated(from: "Student", purpose: QUERY_MULTIPLE)
+    having: Household_Having
+  ): [Household!]! @fdc_generated(from: "Household", purpose: QUERY_MULTIPLE)
   """
-  ✨ List `Subject` objects in the table and return selected fields, optionally filtered by `where` conditions
+  ✨ List `Submission` objects in the table and return selected fields, optionally filtered by `where` conditions
   """
-  subjects(
+  submissions(
     """
     Filter condition to narrow down the query results.
     """
-    where: Subject_Filter
+    where: Submission_Filter
 
     """
     Order the query results by specific fields.
     """
-    orderBy: [Subject_Order!]
+    orderBy: [Submission_Order!]
 
     """
     Number of rows to skip before starting to return the results.
@@ -262,6 +286,40 @@ extend type Query {
     """
     Filter condition to apply to the groups of aggregate queries.
     """
-    having: Subject_Having
-  ): [Subject!]! @fdc_generated(from: "Subject", purpose: QUERY_MULTIPLE)
+    having: Submission_Having
+  ): [Submission!]! @fdc_generated(from: "Submission", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `User` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  users(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: User_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [User_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: User_Having
+  ): [User!]! @fdc_generated(from: "User", purpose: QUERY_MULTIPLE)
 }

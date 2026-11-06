@@ -1,0 +1,259 @@
+[debug] [2026-11-06T05:34:11.903Z] ----------------------------------------------------------------------
+[debug] [2026-11-06T05:34:12.470Z] Command:       D:\program files\nvm4w\nodejs\node.exe D:\program files\nvm4w\nodejs\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2026-11-06T05:34:12.472Z] CLI Version:   15.35.0
+[debug] [2026-11-06T05:34:12.472Z] Platform:      win32
+[debug] [2026-11-06T05:34:12.473Z] Node Version:  v22.23.1
+[debug] [2026-11-06T05:34:12.474Z] Detected Agent: unknown
+[debug] [2026-11-06T05:34:12.487Z] Time:          Thu Nov 05 2026 23:34:12 GMT-0600 (Central Standard Time)
+[debug] [2026-11-06T05:34:12.487Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-11-06T05:35:07.955Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-11-06T05:35:07.957Z] > authorizing via signed-in user (coxkids.homeschooling@gmail.com)
+[info] i  emulators: Starting emulators: dataconnect {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: dataconnect"}}
+[debug] [2026-11-06T05:35:08.219Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-11-06T05:35:08.220Z] [dataconnect.postgres] postgres server for dataconnect only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-11-06T05:35:08.220Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"dataconnect":[{"address":"127.0.0.1","family":"IPv4","port":9399},{"address":"::1","family":"IPv6","port":9399}],"dataconnect.postgres":[{"address":"127.0.0.1","family":"IPv4","port":5432}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2026-11-06T05:35:08.299Z] Write emulator hub locator at C:\Users\mrsjc\AppData\Local\Temp\hub-cox-academy-v2.json
+[debug] [2026-11-06T05:35:08.524Z] defaultcredentials: writing to file C:\Users\mrsjc\AppData\Roaming\firebase\coxkids_homeschooling_gmail.com_application_default_credentials.json
+[debug] [2026-11-06T05:35:09.247Z] 'fdc build' failed with error: Unable to build your SQL Connect schema and connectors (exit code 1): E1105 23:35:09.204552   22976 cmd.go:43] Error loading data connect config: could not unmarshal dataconnect.yaml at `dataconnect.yaml`: yaml: unmarshal errors:
+  line 5: cannot unmarshal !!map into []*configfolder.SchemaOptions
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"'fdc build' failed with error: Unable to build your SQL Connect schema and connectors (exit code 1): E1105 23:35:09.204552   22976 cmd.go:43] Error loading data connect config: could not unmarshal dataconnect.yaml at `dataconnect.yaml`: yaml: unmarshal errors:\n  line 5: cannot unmarshal !!map into []*configfolder.SchemaOptions\n"}}
+[debug] [2026-11-06T05:35:09.248Z] defaultcredentials: writing to file C:\Users\mrsjc\AppData\Roaming\firebase\coxkids_homeschooling_gmail.com_application_default_credentials.json
+[debug] [2026-11-06T05:35:09.823Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2026-11-06T05:35:09.823Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2026-11-06T05:35:09.823Z] Starting SQL Connect Emulator with command {"binary":"C:\\Users\\mrsjc\\.cache\\firebase\\emulators\\dataconnect-emulator-3.4.25.exe","args":["--logtostderr","-v=2","dev","--listen=127.0.0.1:9399,[::1]:9399","--config_dir=D:\\cox-academy-v2\\dataconnect","--enable_output_schema_extensions=true","--enable_output_generated_sdk=true"],"optionalArgs":["listen","config_dir","enable_output_schema_extensions","enable_output_generated_sdk"],"joinArgs":true,"shell":false,"port":9399} {"metadata":{"emulator":{"name":"dataconnect"},"message":"Starting SQL Connect Emulator with command {\"binary\":\"C:\\\\Users\\\\mrsjc\\\\.cache\\\\firebase\\\\emulators\\\\dataconnect-emulator-3.4.25.exe\",\"args\":[\"--logtostderr\",\"-v=2\",\"dev\",\"--listen=127.0.0.1:9399,[::1]:9399\",\"--config_dir=D:\\\\cox-academy-v2\\\\dataconnect\",\"--enable_output_schema_extensions=true\",\"--enable_output_generated_sdk=true\"],\"optionalArgs\":[\"listen\",\"config_dir\",\"enable_output_schema_extensions\",\"enable_output_generated_sdk\"],\"joinArgs\":true,\"shell\":false,\"port\":9399}"}}
+[info] i  dataconnect: SQL Connect Emulator logging to dataconnect-debug.log {"metadata":{"emulator":{"name":"dataconnect"},"message":"SQL Connect Emulator logging to \u001b[1mdataconnect-debug.log\u001b[22m"}}
+[debug] [2026-11-06T05:35:09.950Z] E1105 23:35:09.922674   23736 dev.go:82] Failed to load initial config from "D:\\cox-academy-v2\\dataconnect": could not unmarshal dataconnect.yaml at `dataconnect.yaml`: yaml: unmarshal errors:
+  line 5: cannot unmarshal !!map into []*configfolder.SchemaOptions
+I1105 23:35:09.933442   23736 dev.go:103] Listening on address (HTTP + gRPC): 127.0.0.1:9399
+I1105 23:35:09.934620   23736 dev.go:103] Listening on address (HTTP + gRPC): [::1]:9399
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"E1105 23:35:09.922674   23736 dev.go:82] Failed to load initial config from \"D:\\\\cox-academy-v2\\\\dataconnect\": could not unmarshal dataconnect.yaml at `dataconnect.yaml`: yaml: unmarshal errors:\n  line 5: cannot unmarshal !!map into []*configfolder.SchemaOptions\nI1105 23:35:09.933442   23736 dev.go:103] Listening on address (HTTP + gRPC): 127.0.0.1:9399\nI1105 23:35:09.934620   23736 dev.go:103] Listening on address (HTTP + gRPC): [::1]:9399\n"}}
+[info] i  emulators: Shutting down emulators. {"metadata":{"emulator":{"name":"hub"},"message":"Shutting down emulators."}}
+[info] i  dataconnect: Stopping SQL Connect Emulator {"metadata":{"emulator":{"name":"dataconnect"},"message":"Stopping SQL Connect Emulator"}}
+[warn] !  SQL Connect Emulator has exited upon receiving signal: SIGINT 
+[info] i  hub: Stopping emulator hub {"metadata":{"emulator":{"name":"hub"},"message":"Stopping emulator hub"}}
+[debug] [2026-11-06T05:35:10.970Z] TypeError: schemaYamls.map is not a function
+    at load (D:\Users\mrsjc\AppData\Local\nvm\v22.23.1\node_modules\firebase-tools\lib\dataconnect\load.js:52:51)
+    at async DataConnectEmulator.start (D:\Users\mrsjc\AppData\Local\nvm\v22.23.1\node_modules\firebase-tools\lib\emulator\dataconnectEmulator.js:64:26)
+    at async EmulatorRegistry.start (D:\Users\mrsjc\AppData\Local\nvm\v22.23.1\node_modules\firebase-tools\lib\emulator\registry.js:19:9)
+    at async Object.startAll (D:\Users\mrsjc\AppData\Local\nvm\v22.23.1\node_modules\firebase-tools\lib\emulator\controller.js:634:9)
+    at async D:\Users\mrsjc\AppData\Local\nvm\v22.23.1\node_modules\firebase-tools\lib\commands\emulators-start.js:34:43
+    at async D:\Users\mrsjc\AppData\Local\nvm\v22.23.1\node_modules\firebase-tools\lib\command.js:287:28
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-11-06T05:35:11.389Z] Found emulator hub locator: {"version":"15.35.0","origins":["http://127.0.0.1:4400","http://[::1]:4400"],"pid":6348}
+[debug] [2026-11-06T05:43:08.429Z] ----------------------------------------------------------------------
+[debug] [2026-11-06T05:43:08.437Z] Command:       D:\program files\nvm4w\nodejs\node.exe D:\program files\nvm4w\nodejs\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --only auth storage dataconnect
+[debug] [2026-11-06T05:43:08.438Z] CLI Version:   15.35.0
+[debug] [2026-11-06T05:43:08.439Z] Platform:      win32
+[debug] [2026-11-06T05:43:08.439Z] Node Version:  v22.23.1
+[debug] [2026-11-06T05:43:08.441Z] Detected Agent: unknown
+[debug] [2026-11-06T05:43:08.441Z] Time:          Thu Nov 05 2026 23:43:08 GMT-0600 (Central Standard Time)
+[debug] [2026-11-06T05:43:08.442Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-11-06T05:43:40.595Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-11-06T05:43:40.596Z] > authorizing via signed-in user (coxkids.homeschooling@gmail.com)
+[info] i  emulators: Starting emulators: dataconnect {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: dataconnect"}}
+[warn] !  auth: Not starting the auth emulator, make sure you have run firebase init. {"metadata":{"emulator":{"name":"auth"},"message":"Not starting the \u001b[1mauth\u001b[22m emulator, make sure you have run \u001b[1mfirebase init\u001b[22m."}}
+[warn] !  storage: Not starting the storage emulator, make sure you have run firebase init. {"metadata":{"emulator":{"name":"storage"},"message":"Not starting the \u001b[1mstorage\u001b[22m emulator, make sure you have run \u001b[1mfirebase init\u001b[22m."}}
+[debug] [2026-11-06T05:43:40.710Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-11-06T05:43:40.710Z] [dataconnect.postgres] postgres server for dataconnect only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-11-06T05:43:40.711Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"dataconnect":[{"address":"127.0.0.1","family":"IPv4","port":9399},{"address":"::1","family":"IPv6","port":9399}],"dataconnect.postgres":[{"address":"127.0.0.1","family":"IPv4","port":5432}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2026-11-06T05:43:40.732Z] Write emulator hub locator at C:\Users\mrsjc\AppData\Local\Temp\hub-cox-academy-v2.json
+[debug] [2026-11-06T05:43:40.975Z] defaultcredentials: writing to file C:\Users\mrsjc\AppData\Roaming\firebase\coxkids_homeschooling_gmail.com_application_default_credentials.json
+[debug] [2026-11-06T05:43:41.945Z] I1105 23:43:41.908127    9952 control.go:92] [projects/emulator/locations/emulator/services/cox-academy-v2 c0c5] UpdateResources(): done
+Main schema: sources: schema/schema.gql [1341B] 
+Connector "homeschool-connector": sources: connector/operations.gql [2128B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1105 23:43:41.908127    9952 control.go:92] [projects/emulator/locations/emulator/services/cox-academy-v2 c0c5] UpdateResources(): done\nMain schema: sources: schema/schema.gql [1341B] \nConnector \"homeschool-connector\": sources: connector/operations.gql [2128B] \n"}}
+[debug] [2026-11-06T05:43:41.947Z] defaultcredentials: writing to file C:\Users\mrsjc\AppData\Roaming\firebase\coxkids_homeschooling_gmail.com_application_default_credentials.json
+[debug] [2026-11-06T05:43:42.701Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2026-11-06T05:43:42.701Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2026-11-06T05:43:42.701Z] Starting SQL Connect Emulator with command {"binary":"C:\\Users\\mrsjc\\.cache\\firebase\\emulators\\dataconnect-emulator-3.4.25.exe","args":["--logtostderr","-v=2","dev","--listen=127.0.0.1:9399,[::1]:9399","--config_dir=D:\\cox-academy-v2\\dataconnect","--enable_output_schema_extensions=true","--enable_output_generated_sdk=true"],"optionalArgs":["listen","config_dir","enable_output_schema_extensions","enable_output_generated_sdk"],"joinArgs":true,"shell":false,"port":9399} {"metadata":{"emulator":{"name":"dataconnect"},"message":"Starting SQL Connect Emulator with command {\"binary\":\"C:\\\\Users\\\\mrsjc\\\\.cache\\\\firebase\\\\emulators\\\\dataconnect-emulator-3.4.25.exe\",\"args\":[\"--logtostderr\",\"-v=2\",\"dev\",\"--listen=127.0.0.1:9399,[::1]:9399\",\"--config_dir=D:\\\\cox-academy-v2\\\\dataconnect\",\"--enable_output_schema_extensions=true\",\"--enable_output_generated_sdk=true\"],\"optionalArgs\":[\"listen\",\"config_dir\",\"enable_output_schema_extensions\",\"enable_output_generated_sdk\"],\"joinArgs\":true,\"shell\":false,\"port\":9399}"}}
+[info] i  dataconnect: SQL Connect Emulator logging to dataconnect-debug.log {"metadata":{"emulator":{"name":"dataconnect"},"message":"SQL Connect Emulator logging to \u001b[1mdataconnect-debug.log\u001b[22m"}}
+[debug] [2026-11-06T05:43:42.826Z] I1105 23:43:42.794958   10320 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1105 23:43:42.794958   10320 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2026-11-06T05:43:42.907Z] I1105 23:43:42.828433   10320 control.go:92] [projects/emulator/locations/emulator/services/cox-academy-v2 885e] UpdateResources(): done
+Main schema: sources: schema/schema.gql [1341B] 
+Connector "homeschool-connector": sources: connector/operations.gql [2128B] 
+I1105 23:43:42.862928   10320 codegen.go:102] [connector "homeschool-connector" javascriptSdk] Generating sources into "D:\\cox-academy-v2\\src\\generated\\dataconnect"
+I1105 23:43:42.885750   10320 collector.go:107] schema extensions wrote into "D:\\cox-academy-v2\\dataconnect\\.dataconnect\\schema"
+Generated sources: main\mutation.gql [20845B] prelude.gql [94415B] main\implicit.gql [1838B] main\input.gql [44852B] main\relation.gql [20682B] main\query.gql [7751B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1105 23:43:42.828433   10320 control.go:92] [projects/emulator/locations/emulator/services/cox-academy-v2 885e] UpdateResources(): done\nMain schema: sources: schema/schema.gql [1341B] \nConnector \"homeschool-connector\": sources: connector/operations.gql [2128B] \nI1105 23:43:42.862928   10320 codegen.go:102] [connector \"homeschool-connector\" javascriptSdk] Generating sources into \"D:\\\\cox-academy-v2\\\\src\\\\generated\\\\dataconnect\"\nI1105 23:43:42.885750   10320 collector.go:107] schema extensions wrote into \"D:\\\\cox-academy-v2\\\\dataconnect\\\\.dataconnect\\\\schema\"\nGenerated sources: main\\mutation.gql [20845B] prelude.gql [94415B] main\\implicit.gql [1838B] main\\input.gql [44852B] main\\relation.gql [20682B] main\\query.gql [7751B] \n"}}
+[debug] [2026-11-06T05:43:42.916Z] I1105 23:43:42.915849   10320 collector.go:107] connector "homeschool-connector" javascriptSdk wrote into "D:\\cox-academy-v2\\src\\generated\\dataconnect"
+Generated sources: index.d.ts [8354B] package.json [649B] README.md [41017B] .guides/usage.md [1855B] .guides/setup.md [605B] .guides/config.json [236B] esm\index.esm.js [4783B] esm\package.json [17B] index.cjs.js [5319B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1105 23:43:42.915849   10320 collector.go:107] connector \"homeschool-connector\" javascriptSdk wrote into \"D:\\\\cox-academy-v2\\\\src\\\\generated\\\\dataconnect\"\nGenerated sources: index.d.ts [8354B] package.json [649B] README.md [41017B] .guides/usage.md [1855B] .guides/setup.md [605B] .guides/config.json [236B] esm\\index.esm.js [4783B] esm\\package.json [17B] index.cjs.js [5319B] \n"}}
+[debug] [2026-11-06T05:43:42.930Z] I1105 23:43:42.928439   10320 installsdk.go:55] Package @firebasegen/homeschool-connector-connector is already installed. Skipping installation
+I1105 23:43:42.928439   10320 load.go:109] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1105 23:43:42.928439   10320 installsdk.go:55] Package @firebasegen/homeschool-connector-connector is already installed. Skipping installation\nI1105 23:43:42.928439   10320 load.go:109] Finished reloading\n"}}
+[debug] [2026-11-06T05:43:42.936Z] I1105 23:43:42.935965   10320 dev.go:103] Listening on address (HTTP + gRPC): 127.0.0.1:9399
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1105 23:43:42.935965   10320 dev.go:103] Listening on address (HTTP + gRPC): 127.0.0.1:9399\n"}}
+[debug] [2026-11-06T05:43:42.936Z] I1105 23:43:42.937023   10320 dev.go:103] Listening on address (HTTP + gRPC): [::1]:9399
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1105 23:43:42.937023   10320 dev.go:103] Listening on address (HTTP + gRPC): [::1]:9399\n"}}
+[info] i  emulators: Shutting down emulators. {"metadata":{"emulator":{"name":"hub"},"message":"Shutting down emulators."}}
+[info] i  dataconnect: Stopping SQL Connect Emulator {"metadata":{"emulator":{"name":"dataconnect"},"message":"Stopping SQL Connect Emulator"}}
+[warn] !  SQL Connect Emulator has exited upon receiving signal: SIGINT 
+[info] i  hub: Stopping emulator hub {"metadata":{"emulator":{"name":"hub"},"message":"Stopping emulator hub"}}
+[debug] [2026-11-06T05:43:43.088Z] TypeError: Cannot read properties of undefined (reading 'postgresql')
+    at DataConnectEmulator.start (D:\Users\mrsjc\AppData\Local\nvm\v22.23.1\node_modules\firebase-tools\lib\emulator\dataconnectEmulator.js:65:86)
+    at async EmulatorRegistry.start (D:\Users\mrsjc\AppData\Local\nvm\v22.23.1\node_modules\firebase-tools\lib\emulator\registry.js:19:9)
+    at async Object.startAll (D:\Users\mrsjc\AppData\Local\nvm\v22.23.1\node_modules\firebase-tools\lib\emulator\controller.js:634:9)
+    at async D:\Users\mrsjc\AppData\Local\nvm\v22.23.1\node_modules\firebase-tools\lib\commands\emulators-start.js:34:43
+    at async D:\Users\mrsjc\AppData\Local\nvm\v22.23.1\node_modules\firebase-tools\lib\command.js:287:28
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-11-06T05:43:43.415Z] Found emulator hub locator: {"version":"15.35.0","origins":["http://127.0.0.1:4400","http://[::1]:4400"],"pid":12464}
+[debug] [2026-11-06T05:51:00.294Z] ----------------------------------------------------------------------
+[debug] [2026-11-06T05:51:00.526Z] Command:       D:\program files\nvm4w\nodejs\node.exe D:\program files\nvm4w\nodejs\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2026-11-06T05:51:00.526Z] CLI Version:   15.35.0
+[debug] [2026-11-06T05:51:00.527Z] Platform:      win32
+[debug] [2026-11-06T05:51:00.527Z] Node Version:  v22.23.1
+[debug] [2026-11-06T05:51:00.527Z] Detected Agent: unknown
+[debug] [2026-11-06T05:51:00.535Z] Time:          Thu Nov 05 2026 23:51:00 GMT-0600 (Central Standard Time)
+[debug] [2026-11-06T05:51:00.535Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-11-06T05:51:18.694Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-11-06T05:51:18.694Z] > authorizing via signed-in user (coxkids.homeschooling@gmail.com)
+[info] i  emulators: Starting emulators: dataconnect {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: dataconnect"}}
+[debug] [2026-11-06T05:51:18.752Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-11-06T05:51:18.752Z] [dataconnect.postgres] postgres server for dataconnect only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-11-06T05:51:18.753Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"dataconnect":[{"address":"127.0.0.1","family":"IPv4","port":9399},{"address":"::1","family":"IPv6","port":9399}],"dataconnect.postgres":[{"address":"127.0.0.1","family":"IPv4","port":5432}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2026-11-06T05:51:18.779Z] Write emulator hub locator at C:\Users\mrsjc\AppData\Local\Temp\hub-cox-academy-v2.json
+[debug] [2026-11-06T05:51:18.858Z] defaultcredentials: writing to file C:\Users\mrsjc\AppData\Roaming\firebase\coxkids_homeschooling_gmail.com_application_default_credentials.json
+[debug] [2026-11-06T05:51:19.275Z] I1105 23:51:19.227630   16064 control.go:92] [projects/emulator/locations/emulator/services/cox-academy-v2 c401] UpdateResources(): done
+Main schema: sources: schema/schema.gql [1341B] 
+Connector "homeschool-connector": sources: connector/operations.gql [2128B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1105 23:51:19.227630   16064 control.go:92] [projects/emulator/locations/emulator/services/cox-academy-v2 c401] UpdateResources(): done\nMain schema: sources: schema/schema.gql [1341B] \nConnector \"homeschool-connector\": sources: connector/operations.gql [2128B] \n"}}
+[debug] [2026-11-06T05:51:19.277Z] defaultcredentials: writing to file C:\Users\mrsjc\AppData\Roaming\firebase\coxkids_homeschooling_gmail.com_application_default_credentials.json
+[debug] [2026-11-06T05:51:19.402Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2026-11-06T05:51:19.402Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2026-11-06T05:51:19.402Z] Starting SQL Connect Emulator with command {"binary":"C:\\Users\\mrsjc\\.cache\\firebase\\emulators\\dataconnect-emulator-3.4.25.exe","args":["--logtostderr","-v=2","dev","--listen=127.0.0.1:9399,[::1]:9399","--config_dir=D:\\cox-academy-v2\\dataconnect","--enable_output_schema_extensions=true","--enable_output_generated_sdk=true"],"optionalArgs":["listen","config_dir","enable_output_schema_extensions","enable_output_generated_sdk"],"joinArgs":true,"shell":false,"port":9399} {"metadata":{"emulator":{"name":"dataconnect"},"message":"Starting SQL Connect Emulator with command {\"binary\":\"C:\\\\Users\\\\mrsjc\\\\.cache\\\\firebase\\\\emulators\\\\dataconnect-emulator-3.4.25.exe\",\"args\":[\"--logtostderr\",\"-v=2\",\"dev\",\"--listen=127.0.0.1:9399,[::1]:9399\",\"--config_dir=D:\\\\cox-academy-v2\\\\dataconnect\",\"--enable_output_schema_extensions=true\",\"--enable_output_generated_sdk=true\"],\"optionalArgs\":[\"listen\",\"config_dir\",\"enable_output_schema_extensions\",\"enable_output_generated_sdk\"],\"joinArgs\":true,\"shell\":false,\"port\":9399}"}}
+[info] i  dataconnect: SQL Connect Emulator logging to dataconnect-debug.log {"metadata":{"emulator":{"name":"dataconnect"},"message":"SQL Connect Emulator logging to \u001b[1mdataconnect-debug.log\u001b[22m"}}
+[debug] [2026-11-06T05:51:19.540Z] I1105 23:51:19.533867   27680 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1105 23:51:19.533867   27680 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2026-11-06T05:51:19.571Z] I1105 23:51:19.571951   27680 control.go:92] [projects/emulator/locations/emulator/services/cox-academy-v2 d665] UpdateResources(): done
+Main schema: sources: schema/schema.gql [1341B] 
+Connector "homeschool-connector": sources: connector/operations.gql [2128B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1105 23:51:19.571951   27680 control.go:92] [projects/emulator/locations/emulator/services/cox-academy-v2 d665] UpdateResources(): done\nMain schema: sources: schema/schema.gql [1341B] \nConnector \"homeschool-connector\": sources: connector/operations.gql [2128B] \n"}}
+[debug] [2026-11-06T05:51:19.612Z] I1105 23:51:19.612322   27680 codegen.go:102] [connector "homeschool-connector" javascriptSdk] Generating sources into "D:\\cox-academy-v2\\src\\generated\\dataconnect"
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1105 23:51:19.612322   27680 codegen.go:102] [connector \"homeschool-connector\" javascriptSdk] Generating sources into \"D:\\\\cox-academy-v2\\\\src\\\\generated\\\\dataconnect\"\n"}}
+[debug] [2026-11-06T05:51:19.645Z] I1105 23:51:19.645003   27680 collector.go:107] schema extensions wrote into "D:\\cox-academy-v2\\dataconnect\\.dataconnect\\schema"
+Generated sources: prelude.gql [94415B] main\implicit.gql [1838B] main\input.gql [44852B] main\relation.gql [20682B] main\query.gql [7751B] main\mutation.gql [20845B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1105 23:51:19.645003   27680 collector.go:107] schema extensions wrote into \"D:\\\\cox-academy-v2\\\\dataconnect\\\\.dataconnect\\\\schema\"\nGenerated sources: prelude.gql [94415B] main\\implicit.gql [1838B] main\\input.gql [44852B] main\\relation.gql [20682B] main\\query.gql [7751B] main\\mutation.gql [20845B] \n"}}
+[info] i  emulators: Shutting down emulators. {"metadata":{"emulator":{"name":"hub"},"message":"Shutting down emulators."}}
+[info] i  dataconnect: Stopping SQL Connect Emulator {"metadata":{"emulator":{"name":"dataconnect"},"message":"Stopping SQL Connect Emulator"}}
+[warn] !  SQL Connect Emulator has exited upon receiving signal: SIGINT 
+[info] i  hub: Stopping emulator hub {"metadata":{"emulator":{"name":"hub"},"message":"Stopping emulator hub"}}
+[debug] [2026-11-06T05:51:19.821Z] TypeError: Cannot read properties of undefined (reading 'postgresql')
+    at DataConnectEmulator.start (D:\Users\mrsjc\AppData\Local\nvm\v22.23.1\node_modules\firebase-tools\lib\emulator\dataconnectEmulator.js:65:86)
+    at async EmulatorRegistry.start (D:\Users\mrsjc\AppData\Local\nvm\v22.23.1\node_modules\firebase-tools\lib\emulator\registry.js:19:9)
+    at async Object.startAll (D:\Users\mrsjc\AppData\Local\nvm\v22.23.1\node_modules\firebase-tools\lib\emulator\controller.js:634:9)
+    at async D:\Users\mrsjc\AppData\Local\nvm\v22.23.1\node_modules\firebase-tools\lib\commands\emulators-start.js:34:43
+    at async D:\Users\mrsjc\AppData\Local\nvm\v22.23.1\node_modules\firebase-tools\lib\command.js:287:28
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-11-06T05:51:20.118Z] Found emulator hub locator: {"version":"15.35.0","origins":["http://127.0.0.1:4400","http://[::1]:4400"],"pid":21464}
+[debug] [2026-11-06T05:51:40.318Z] ----------------------------------------------------------------------
+[debug] [2026-11-06T05:51:40.324Z] Command:       D:\program files\nvm4w\nodejs\node.exe D:\program files\nvm4w\nodejs\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --only auth storage dataconnect
+[debug] [2026-11-06T05:51:40.324Z] CLI Version:   15.35.0
+[debug] [2026-11-06T05:51:40.324Z] Platform:      win32
+[debug] [2026-11-06T05:51:40.324Z] Node Version:  v22.23.1
+[debug] [2026-11-06T05:51:40.325Z] Detected Agent: unknown
+[debug] [2026-11-06T05:51:40.325Z] Time:          Thu Nov 05 2026 23:51:40 GMT-0600 (Central Standard Time)
+[debug] [2026-11-06T05:51:40.325Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-11-06T05:51:45.072Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-11-06T05:51:45.072Z] > authorizing via signed-in user (coxkids.homeschooling@gmail.com)
+[info] i  emulators: Starting emulators: dataconnect {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: dataconnect"}}
+[warn] !  auth: Not starting the auth emulator, make sure you have run firebase init. {"metadata":{"emulator":{"name":"auth"},"message":"Not starting the \u001b[1mauth\u001b[22m emulator, make sure you have run \u001b[1mfirebase init\u001b[22m."}}
+[warn] !  storage: Not starting the storage emulator, make sure you have run firebase init. {"metadata":{"emulator":{"name":"storage"},"message":"Not starting the \u001b[1mstorage\u001b[22m emulator, make sure you have run \u001b[1mfirebase init\u001b[22m."}}
+[debug] [2026-11-06T05:51:45.099Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-11-06T05:51:45.099Z] [dataconnect.postgres] postgres server for dataconnect only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-11-06T05:51:45.099Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"dataconnect":[{"address":"127.0.0.1","family":"IPv4","port":9399},{"address":"::1","family":"IPv6","port":9399}],"dataconnect.postgres":[{"address":"127.0.0.1","family":"IPv4","port":5432}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2026-11-06T05:51:45.115Z] Write emulator hub locator at C:\Users\mrsjc\AppData\Local\Temp\hub-cox-academy-v2.json
+[debug] [2026-11-06T05:51:45.141Z] defaultcredentials: writing to file C:\Users\mrsjc\AppData\Roaming\firebase\coxkids_homeschooling_gmail.com_application_default_credentials.json
+[debug] [2026-11-06T05:51:45.297Z] I1105 23:51:45.273107    7820 control.go:92] [projects/emulator/locations/emulator/services/cox-academy-v2 ad4a] UpdateResources(): done
+Main schema: sources: schema/schema.gql [1341B] 
+Connector "homeschool-connector": sources: connector/operations.gql [2128B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1105 23:51:45.273107    7820 control.go:92] [projects/emulator/locations/emulator/services/cox-academy-v2 ad4a] UpdateResources(): done\nMain schema: sources: schema/schema.gql [1341B] \nConnector \"homeschool-connector\": sources: connector/operations.gql [2128B] \n"}}
+[debug] [2026-11-06T05:51:45.299Z] defaultcredentials: writing to file C:\Users\mrsjc\AppData\Roaming\firebase\coxkids_homeschooling_gmail.com_application_default_credentials.json
+[debug] [2026-11-06T05:51:45.306Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2026-11-06T05:51:45.306Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2026-11-06T05:51:45.307Z] Starting SQL Connect Emulator with command {"binary":"C:\\Users\\mrsjc\\.cache\\firebase\\emulators\\dataconnect-emulator-3.4.25.exe","args":["--logtostderr","-v=2","dev","--listen=127.0.0.1:9399,[::1]:9399","--config_dir=D:\\cox-academy-v2\\dataconnect","--enable_output_schema_extensions=true","--enable_output_generated_sdk=true"],"optionalArgs":["listen","config_dir","enable_output_schema_extensions","enable_output_generated_sdk"],"joinArgs":true,"shell":false,"port":9399} {"metadata":{"emulator":{"name":"dataconnect"},"message":"Starting SQL Connect Emulator with command {\"binary\":\"C:\\\\Users\\\\mrsjc\\\\.cache\\\\firebase\\\\emulators\\\\dataconnect-emulator-3.4.25.exe\",\"args\":[\"--logtostderr\",\"-v=2\",\"dev\",\"--listen=127.0.0.1:9399,[::1]:9399\",\"--config_dir=D:\\\\cox-academy-v2\\\\dataconnect\",\"--enable_output_schema_extensions=true\",\"--enable_output_generated_sdk=true\"],\"optionalArgs\":[\"listen\",\"config_dir\",\"enable_output_schema_extensions\",\"enable_output_generated_sdk\"],\"joinArgs\":true,\"shell\":false,\"port\":9399}"}}
+[info] i  dataconnect: SQL Connect Emulator logging to dataconnect-debug.log {"metadata":{"emulator":{"name":"dataconnect"},"message":"SQL Connect Emulator logging to \u001b[1mdataconnect-debug.log\u001b[22m"}}
+[debug] [2026-11-06T05:51:45.408Z] I1105 23:51:45.393935   36564 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1105 23:51:45.393935   36564 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2026-11-06T05:51:45.424Z] I1105 23:51:45.424295   36564 control.go:92] [projects/emulator/locations/emulator/services/cox-academy-v2 374d] UpdateResources(): done
+Main schema: sources: schema/schema.gql [1341B] 
+Connector "homeschool-connector": sources: connector/operations.gql [2128B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1105 23:51:45.424295   36564 control.go:92] [projects/emulator/locations/emulator/services/cox-academy-v2 374d] UpdateResources(): done\nMain schema: sources: schema/schema.gql [1341B] \nConnector \"homeschool-connector\": sources: connector/operations.gql [2128B] \n"}}
+[info] i  emulators: Shutting down emulators. {"metadata":{"emulator":{"name":"hub"},"message":"Shutting down emulators."}}
+[info] i  dataconnect: Stopping SQL Connect Emulator {"metadata":{"emulator":{"name":"dataconnect"},"message":"Stopping SQL Connect Emulator"}}
+[warn] !  SQL Connect Emulator has exited upon receiving signal: SIGINT 
+[info] i  hub: Stopping emulator hub {"metadata":{"emulator":{"name":"hub"},"message":"Stopping emulator hub"}}
+[debug] [2026-11-06T05:51:45.512Z] TypeError: Cannot read properties of undefined (reading 'postgresql')
+    at DataConnectEmulator.start (D:\Users\mrsjc\AppData\Local\nvm\v22.23.1\node_modules\firebase-tools\lib\emulator\dataconnectEmulator.js:65:86)
+    at async EmulatorRegistry.start (D:\Users\mrsjc\AppData\Local\nvm\v22.23.1\node_modules\firebase-tools\lib\emulator\registry.js:19:9)
+    at async Object.startAll (D:\Users\mrsjc\AppData\Local\nvm\v22.23.1\node_modules\firebase-tools\lib\emulator\controller.js:634:9)
+    at async D:\Users\mrsjc\AppData\Local\nvm\v22.23.1\node_modules\firebase-tools\lib\commands\emulators-start.js:34:43
+    at async D:\Users\mrsjc\AppData\Local\nvm\v22.23.1\node_modules\firebase-tools\lib\command.js:287:28
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-11-06T05:51:45.852Z] Found emulator hub locator: {"version":"15.35.0","origins":["http://127.0.0.1:4400","http://[::1]:4400"],"pid":38320}
+[debug] [2026-11-06T05:55:39.222Z] ----------------------------------------------------------------------
+[debug] [2026-11-06T05:55:39.458Z] Command:       D:\program files\nvm4w\nodejs\node.exe D:\program files\nvm4w\nodejs\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --only auth,storage,dataconnect
+[debug] [2026-11-06T05:55:39.459Z] CLI Version:   15.35.0
+[debug] [2026-11-06T05:55:39.460Z] Platform:      win32
+[debug] [2026-11-06T05:55:39.460Z] Node Version:  v22.23.1
+[debug] [2026-11-06T05:55:39.460Z] Detected Agent: unknown
+[debug] [2026-11-06T05:55:39.467Z] Time:          Thu Nov 05 2026 23:55:39 GMT-0600 (Central Standard Time)
+[debug] [2026-11-06T05:55:39.467Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-11-06T05:56:01.760Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-11-06T05:56:01.760Z] > authorizing via signed-in user (coxkids.homeschooling@gmail.com)
+[info] i  emulators: Starting emulators: dataconnect {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: dataconnect"}}
+[warn] !  auth: Not starting the auth emulator, make sure you have run firebase init. {"metadata":{"emulator":{"name":"auth"},"message":"Not starting the \u001b[1mauth\u001b[22m emulator, make sure you have run \u001b[1mfirebase init\u001b[22m."}}
+[warn] !  storage: Not starting the storage emulator, make sure you have run firebase init. {"metadata":{"emulator":{"name":"storage"},"message":"Not starting the \u001b[1mstorage\u001b[22m emulator, make sure you have run \u001b[1mfirebase init\u001b[22m."}}
+[debug] [2026-11-06T05:56:01.819Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-11-06T05:56:01.820Z] [dataconnect.postgres] postgres server for dataconnect only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-11-06T05:56:01.820Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"dataconnect":[{"address":"127.0.0.1","family":"IPv4","port":9399},{"address":"::1","family":"IPv6","port":9399}],"dataconnect.postgres":[{"address":"127.0.0.1","family":"IPv4","port":5432}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2026-11-06T05:56:01.839Z] Write emulator hub locator at C:\Users\mrsjc\AppData\Local\Temp\hub-cox-academy-v2.json
+[debug] [2026-11-06T05:56:02.009Z] defaultcredentials: writing to file C:\Users\mrsjc\AppData\Roaming\firebase\coxkids_homeschooling_gmail.com_application_default_credentials.json
+[debug] [2026-11-06T05:56:02.765Z] I1105 23:56:02.468574   19396 control.go:92] [projects/emulator/locations/emulator/services/cox-academy-v2 0e5d] UpdateResources(): done
+Main schema: sources: schema/schema.gql [1341B] 
+Connector "homeschool-connector": sources: connector/operations.gql [2128B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1105 23:56:02.468574   19396 control.go:92] [projects/emulator/locations/emulator/services/cox-academy-v2 0e5d] UpdateResources(): done\nMain schema: sources: schema/schema.gql [1341B] \nConnector \"homeschool-connector\": sources: connector/operations.gql [2128B] \n"}}
+[debug] [2026-11-06T05:56:02.768Z] defaultcredentials: writing to file C:\Users\mrsjc\AppData\Roaming\firebase\coxkids_homeschooling_gmail.com_application_default_credentials.json
+[debug] [2026-11-06T05:56:03.224Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2026-11-06T05:56:03.225Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2026-11-06T05:56:03.225Z] Starting SQL Connect Emulator with command {"binary":"C:\\Users\\mrsjc\\.cache\\firebase\\emulators\\dataconnect-emulator-3.4.25.exe","args":["--logtostderr","-v=2","dev","--listen=127.0.0.1:9399,[::1]:9399","--config_dir=D:\\cox-academy-v2\\dataconnect","--enable_output_schema_extensions=true","--enable_output_generated_sdk=true"],"optionalArgs":["listen","config_dir","enable_output_schema_extensions","enable_output_generated_sdk"],"joinArgs":true,"shell":false,"port":9399} {"metadata":{"emulator":{"name":"dataconnect"},"message":"Starting SQL Connect Emulator with command {\"binary\":\"C:\\\\Users\\\\mrsjc\\\\.cache\\\\firebase\\\\emulators\\\\dataconnect-emulator-3.4.25.exe\",\"args\":[\"--logtostderr\",\"-v=2\",\"dev\",\"--listen=127.0.0.1:9399,[::1]:9399\",\"--config_dir=D:\\\\cox-academy-v2\\\\dataconnect\",\"--enable_output_schema_extensions=true\",\"--enable_output_generated_sdk=true\"],\"optionalArgs\":[\"listen\",\"config_dir\",\"enable_output_schema_extensions\",\"enable_output_generated_sdk\"],\"joinArgs\":true,\"shell\":false,\"port\":9399}"}}
+[info] i  dataconnect: SQL Connect Emulator logging to dataconnect-debug.log {"metadata":{"emulator":{"name":"dataconnect"},"message":"SQL Connect Emulator logging to \u001b[1mdataconnect-debug.log\u001b[22m"}}
+[debug] [2026-11-06T05:56:03.370Z] I1105 23:56:03.350588   31940 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1105 23:56:03.350588   31940 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2026-11-06T05:56:03.395Z] I1105 23:56:03.394651   31940 control.go:92] [projects/emulator/locations/emulator/services/cox-academy-v2 b862] UpdateResources(): done
+Main schema: sources: schema/schema.gql [1341B] 
+Connector "homeschool-connector": sources: connector/operations.gql [2128B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1105 23:56:03.394651   31940 control.go:92] [projects/emulator/locations/emulator/services/cox-academy-v2 b862] UpdateResources(): done\nMain schema: sources: schema/schema.gql [1341B] \nConnector \"homeschool-connector\": sources: connector/operations.gql [2128B] \n"}}
+[debug] [2026-11-06T05:56:03.459Z] I1105 23:56:03.457934   31940 codegen.go:102] [connector "homeschool-connector" javascriptSdk] Generating sources into "D:\\cox-academy-v2\\src\\generated\\dataconnect"
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1105 23:56:03.457934   31940 codegen.go:102] [connector \"homeschool-connector\" javascriptSdk] Generating sources into \"D:\\\\cox-academy-v2\\\\src\\\\generated\\\\dataconnect\"\n"}}
+[debug] [2026-11-06T05:56:03.493Z] I1105 23:56:03.491818   31940 collector.go:107] schema extensions wrote into "D:\\cox-academy-v2\\dataconnect\\.dataconnect\\schema"
+Generated sources: prelude.gql [94415B] main\implicit.gql [1838B] main\input.gql [44852B] main\relation.gql [20682B] main\query.gql [7751B] main\mutation.gql [20845B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1105 23:56:03.491818   31940 collector.go:107] schema extensions wrote into \"D:\\\\cox-academy-v2\\\\dataconnect\\\\.dataconnect\\\\schema\"\nGenerated sources: prelude.gql [94415B] main\\implicit.gql [1838B] main\\input.gql [44852B] main\\relation.gql [20682B] main\\query.gql [7751B] main\\mutation.gql [20845B] \n"}}
+[debug] [2026-11-06T05:56:03.531Z] I1105 23:56:03.531407   31940 collector.go:107] connector "homeschool-connector" javascriptSdk wrote into "D:\\cox-academy-v2\\src\\generated\\dataconnect"
+Generated sources: .guides/config.json [236B] index.d.ts [8354B] esm\index.esm.js [4783B] esm\package.json [17B] package.json [649B] README.md [41017B] .guides/usage.md [1855B] index.cjs.js [5319B] .guides/setup.md [605B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1105 23:56:03.531407   31940 collector.go:107] connector \"homeschool-connector\" javascriptSdk wrote into \"D:\\\\cox-academy-v2\\\\src\\\\generated\\\\dataconnect\"\nGenerated sources: .guides/config.json [236B] index.d.ts [8354B] esm\\index.esm.js [4783B] esm\\package.json [17B] package.json [649B] README.md [41017B] .guides/usage.md [1855B] index.cjs.js [5319B] .guides/setup.md [605B] \n"}}
+[debug] [2026-11-06T05:56:03.568Z] I1105 23:56:03.567550   31940 installsdk.go:55] Package @firebasegen/homeschool-connector-connector is already installed. Skipping installation
+I1105 23:56:03.567550   31940 load.go:109] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1105 23:56:03.567550   31940 installsdk.go:55] Package @firebasegen/homeschool-connector-connector is already installed. Skipping installation\nI1105 23:56:03.567550   31940 load.go:109] Finished reloading\n"}}
+[info] i  emulators: Shutting down emulators. {"metadata":{"emulator":{"name":"hub"},"message":"Shutting down emulators."}}
+[info] i  dataconnect: Stopping SQL Connect Emulator {"metadata":{"emulator":{"name":"dataconnect"},"message":"Stopping SQL Connect Emulator"}}
+[warn] !  SQL Connect Emulator has exited upon receiving signal: SIGINT 
+[info] i  hub: Stopping emulator hub {"metadata":{"emulator":{"name":"hub"},"message":"Stopping emulator hub"}}
+[debug] [2026-11-06T05:56:03.817Z] TypeError: Cannot read properties of undefined (reading 'postgresql')
+    at DataConnectEmulator.start (D:\Users\mrsjc\AppData\Local\nvm\v22.23.1\node_modules\firebase-tools\lib\emulator\dataconnectEmulator.js:65:86)
+    at async EmulatorRegistry.start (D:\Users\mrsjc\AppData\Local\nvm\v22.23.1\node_modules\firebase-tools\lib\emulator\registry.js:19:9)
+    at async Object.startAll (D:\Users\mrsjc\AppData\Local\nvm\v22.23.1\node_modules\firebase-tools\lib\emulator\controller.js:634:9)
+    at async D:\Users\mrsjc\AppData\Local\nvm\v22.23.1\node_modules\firebase-tools\lib\commands\emulators-start.js:34:43
+    at async D:\Users\mrsjc\AppData\Local\nvm\v22.23.1\node_modules\firebase-tools\lib\command.js:287:28
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-11-06T05:56:04.214Z] Found emulator hub locator: {"version":"15.35.0","origins":["http://127.0.0.1:4400","http://[::1]:4400"],"pid":34804}
