@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@dataconnect/generated": "file:src/dataconnect-generated",
     "@firebasegen/homeschool-connector-connector": "file:src/generated/dataconnect",
     "next": "16.4.5",
     "react": "19.3.0",
