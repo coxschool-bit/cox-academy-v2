@@ -9,6 +9,7 @@ This README will guide you through the process of using the generated JavaScript
   - [*Connecting to the local Emulator*](#connecting-to-the-local-emulator)
 - [**Queries**](#queries)
   - [*GetCurrentUser*](#getcurrentuser)
+  - [*GetClassDetails*](#getclassdetails)
   - [*GetMyEnrollments*](#getmyenrollments)
   - [*GetClassAssignments*](#getclassassignments)
 - [**Mutations**](#mutations)
@@ -162,6 +163,121 @@ console.log(data.user);
 executeQuery(ref).then((response) => {
   const data = response.data;
   console.log(data.user);
+});
+```
+
+## GetClassDetails
+You can execute the `GetClassDetails` query using the following action shortcut function, or by calling `executeQuery()` after calling the following `QueryRef` function, both of which are defined in [dataconnect/index.d.ts](./index.d.ts):
+```typescript
+getClassDetails(vars: GetClassDetailsVariables, options?: ExecuteQueryOptions): QueryPromise<GetClassDetailsData, GetClassDetailsVariables>;
+
+interface GetClassDetailsRef {
+  ...
+  /* Allow users to create refs without passing in DataConnect */
+  (vars: GetClassDetailsVariables): QueryRef<GetClassDetailsData, GetClassDetailsVariables>;
+}
+export const getClassDetailsRef: GetClassDetailsRef;
+```
+You can also pass in a `DataConnect` instance to the action shortcut function or `QueryRef` function.
+```typescript
+getClassDetails(dc: DataConnect, vars: GetClassDetailsVariables, options?: ExecuteQueryOptions): QueryPromise<GetClassDetailsData, GetClassDetailsVariables>;
+
+interface GetClassDetailsRef {
+  ...
+  (dc: DataConnect, vars: GetClassDetailsVariables): QueryRef<GetClassDetailsData, GetClassDetailsVariables>;
+}
+export const getClassDetailsRef: GetClassDetailsRef;
+```
+
+If you need the name of the operation without creating a ref, you can retrieve the operation name by calling the `operationName` property on the getClassDetailsRef:
+```typescript
+const name = getClassDetailsRef.operationName;
+console.log(name);
+```
+
+### Variables
+The `GetClassDetails` query requires an argument of type `GetClassDetailsVariables`, which is defined in [dataconnect/index.d.ts](./index.d.ts). It has the following fields:
+
+```typescript
+export interface GetClassDetailsVariables {
+  classId: UUIDString;
+}
+```
+### Return Type
+Recall that executing the `GetClassDetails` query returns a `QueryPromise` that resolves to an object with a `data` property.
+
+The `data` property is an object of type `GetClassDetailsData`, which is defined in [dataconnect/index.d.ts](./index.d.ts). It has the following fields:
+```typescript
+export interface GetClassDetailsData {
+  class?: {
+    id: UUIDString;
+    name: string;
+    subject: string;
+    color: string;
+    teacherId: string;
+  } & Class_Key;
+}
+```
+### Using `GetClassDetails`'s action shortcut function
+
+```typescript
+import { getDataConnect } from 'firebase/data-connect';
+import { connectorConfig, getClassDetails, GetClassDetailsVariables } from '@firebasegen/homeschool-connector-connector';
+
+// The `GetClassDetails` query requires an argument of type `GetClassDetailsVariables`:
+const getClassDetailsVars: GetClassDetailsVariables = {
+  classId: ..., 
+};
+
+// Call the `getClassDetails()` function to execute the query.
+// You can use the `await` keyword to wait for the promise to resolve.
+const { data } = await getClassDetails(getClassDetailsVars);
+// Variables can be defined inline as well.
+const { data } = await getClassDetails({ classId: ..., });
+
+// You can also pass in a `DataConnect` instance to the action shortcut function.
+const dataConnect = getDataConnect(connectorConfig);
+const { data } = await getClassDetails(dataConnect, getClassDetailsVars);
+
+console.log(data.class);
+
+// Or, you can use the `Promise` API.
+getClassDetails(getClassDetailsVars).then((response) => {
+  const data = response.data;
+  console.log(data.class);
+});
+```
+
+### Using `GetClassDetails`'s `QueryRef` function
+
+```typescript
+import { getDataConnect, executeQuery } from 'firebase/data-connect';
+import { connectorConfig, getClassDetailsRef, GetClassDetailsVariables } from '@firebasegen/homeschool-connector-connector';
+
+// The `GetClassDetails` query requires an argument of type `GetClassDetailsVariables`:
+const getClassDetailsVars: GetClassDetailsVariables = {
+  classId: ..., 
+};
+
+// Call the `getClassDetailsRef()` function to get a reference to the query.
+const ref = getClassDetailsRef(getClassDetailsVars);
+// Variables can be defined inline as well.
+const ref = getClassDetailsRef({ classId: ..., });
+
+// You can also pass in a `DataConnect` instance to the `QueryRef` function.
+const dataConnect = getDataConnect(connectorConfig);
+const ref = getClassDetailsRef(dataConnect, getClassDetailsVars);
+
+// Call `executeQuery()` on the reference to execute the query.
+// You can use the `await` keyword to wait for the promise to resolve.
+const { data } = await executeQuery(ref);
+
+console.log(data.class);
+
+// Or, you can use the `Promise` API.
+executeQuery(ref).then((response) => {
+  const data = response.data;
+  console.log(data.class);
 });
 ```
 

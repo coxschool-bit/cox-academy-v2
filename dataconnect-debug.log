@@ -1,7 +1,0 @@
-I1106 10:00:12.223964   29788 load.go:31] Reloading schema and connectors...
-I1106 10:00:12.256307   29788 control.go:92] [projects/emulator/locations/emulator/services/cox-academy-v2 6b74] UpdateResources(): done
-Main schema: sources: schema/schema.gql [1341B] 
-Connector "homeschool-connector": sources: connector/operations.gql [2128B] 
-I1106 10:00:12.285623   29788 codegen.go:102] [connector "homeschool-connector" javascriptSdk] Generating sources into "D:\\cox-academy-v2\\src\\generated\\dataconnect"
-I1106 10:00:12.315654   29788 collector.go:107] schema extensions wrote into "D:\\cox-academy-v2\\dataconnect\\.dataconnect\\schema"
-Generated sources: main\input.gql [44852B] main\relation.gql [20682B] main\query.gql [7751B] main\mutation.gql [20845B] prelude.gql [94415B] main\implicit.gql [1838B] 

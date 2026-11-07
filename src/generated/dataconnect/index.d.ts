@@ -72,6 +72,20 @@ export interface GetClassAssignmentsVariables {
   classId: UUIDString;
 }
 
+export interface GetClassDetailsData {
+  class?: {
+    id: UUIDString;
+    name: string;
+    subject: string;
+    color: string;
+    teacherId: string;
+  } & Class_Key;
+}
+
+export interface GetClassDetailsVariables {
+  classId: UUIDString;
+}
+
 export interface GetCurrentUserData {
   user?: {
     id: string;
@@ -147,6 +161,18 @@ export const getCurrentUserRef: GetCurrentUserRef;
 
 export function getCurrentUser(options?: ExecuteQueryOptions): QueryPromise<GetCurrentUserData, undefined>;
 export function getCurrentUser(dc: DataConnect, options?: ExecuteQueryOptions): QueryPromise<GetCurrentUserData, undefined>;
+
+interface GetClassDetailsRef {
+  /* Allow users to create refs without passing in DataConnect */
+  (vars: GetClassDetailsVariables): QueryRef<GetClassDetailsData, GetClassDetailsVariables>;
+  /* Allow users to pass in custom DataConnect instances */
+  (dc: DataConnect, vars: GetClassDetailsVariables): QueryRef<GetClassDetailsData, GetClassDetailsVariables>;
+  operationName: string;
+}
+export const getClassDetailsRef: GetClassDetailsRef;
+
+export function getClassDetails(vars: GetClassDetailsVariables, options?: ExecuteQueryOptions): QueryPromise<GetClassDetailsData, GetClassDetailsVariables>;
+export function getClassDetails(dc: DataConnect, vars: GetClassDetailsVariables, options?: ExecuteQueryOptions): QueryPromise<GetClassDetailsData, GetClassDetailsVariables>;
 
 interface GetMyEnrollmentsRef {
   /* Allow users to create refs without passing in DataConnect */

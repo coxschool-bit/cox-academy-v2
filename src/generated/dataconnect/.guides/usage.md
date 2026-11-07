@@ -14,11 +14,14 @@ If a user is not using a supported framework, they can use the generated SDK dir
 Here's an example of how to use it with the first 5 operations:
 
 ```js
-import { getCurrentUser, getMyEnrollments, getClassAssignments, createUser, createClass, createAssignment, submitAssignment, gradeSubmission } from '@firebasegen/homeschool-connector-connector';
+import { getCurrentUser, getClassDetails, getMyEnrollments, getClassAssignments, createUser, createClass, createAssignment, submitAssignment, gradeSubmission } from '@firebasegen/homeschool-connector-connector';
 
 
 // Operation GetCurrentUser: 
 const { data } = await GetCurrentUser(dataConnect);
+
+// Operation GetClassDetails:  For variables, look at type GetClassDetailsVars in ../index.d.ts
+const { data } = await GetClassDetails(dataConnect, getClassDetailsVars);
 
 // Operation GetMyEnrollments:  For variables, look at type GetMyEnrollmentsVars in ../index.d.ts
 const { data } = await GetMyEnrollments(dataConnect, getMyEnrollmentsVars);
