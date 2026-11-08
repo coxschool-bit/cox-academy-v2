@@ -33,7 +33,7 @@ export default function LoginPage() {
     return (
         <div className="space-y-6">
             <div className="text-center">
-                <h2 className="text-2xl font-bold text-gray-900">Welcome Back</h2>
+                <h2 className="text-2xl font-bold text-gray-900 font-serif">Welcome Back</h2>
                 <p className="text-sm text-gray-500 mt-1">Sign in to your Cox Academy account</p>
             </div>
 
@@ -51,7 +51,7 @@ export default function LoginPage() {
                         required
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 text-sm"
+                        className="mt-1 block w-full px-3 py-2 border border-dusty-light/30 rounded-lg shadow-sm focus:outline-none focus:ring-1 focus:ring-dusty-medium bg-ivory focus:border-dusty-medium text-sm"
                     />
                 </div>
                 <div>
@@ -61,10 +61,10 @@ export default function LoginPage() {
                         required
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
-                        className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 text-sm"
+                        className="mt-1 block w-full px-3 py-2 border border-dusty-light/30 rounded-lg shadow-sm focus:outline-none focus:ring-1 focus:ring-dusty-medium focus:border-dusty-medium text-sm"
                     />
                 </div>
-                <button type="submit" className="w-full py-2.5 px-4 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg shadow-sm transition">
+                <button type="submit" className="w-full py-2.5 px-4 text-sm font-semibold text-white bg-dusty-medium hover:bg-dusty-dark rounded-lg shadow-sm transition">
                     Sign In
                 </button>
             </form>
@@ -74,12 +74,12 @@ export default function LoginPage() {
                 <span className="relative px-3 bg-white text-xs text-gray-500 uppercase">Or continue with</span>
             </div>
 
-            <button onClick={handleGoogleLogin} className="w-full py-2.5 px-4 border border-gray-300 hover:bg-gray-50 rounded-lg flex items-center justify-center space-x-2 text-sm font-semibold text-gray-700 transition">
+            <button onClick={handleGoogleLogin} className="w-full py-2.5 px-4 border border-dusty-light/30 hover:bg-ivory bg-ivory-pure rounded-lg flex items-center justify-center space-x-2 text-sm font-semibold text-gray-700 transition">
                 <span>🔑 Google Sign-In</span>
             </button>
 
             <p className="text-center text-sm text-gray-500">
-                Don't have an account? <Link href="/signup" className="font-semibold text-indigo-600 hover:text-indigo-500">Sign up</Link>
+                Don't have an account? <Link href="/signup" className="font-semibold text-dusty-medium hover:text-dusty-dark">Sign up</Link>
             </p>
         </div>
     );

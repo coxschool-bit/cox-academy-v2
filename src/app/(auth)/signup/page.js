@@ -45,7 +45,7 @@ export default function SignupPage() {
     return (
         <div className="space-y-6">
             <div className="text-center">
-                <h2 className="text-2xl font-bold text-gray-900">Create Account</h2>
+                <h2 className="text-2xl font-bold text-gray-900 font-serif">Create Account</h2>
                 <p className="text-sm text-gray-500 mt-1">Join Cox Academy and start learning</p>
             </div>
 
@@ -63,7 +63,7 @@ export default function SignupPage() {
                         required
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 text-sm"
+                        className="mt-1 block w-full px-3 py-2 border border-dusty-light/30 rounded-lg shadow-sm focus:outline-none focus:ring-1 focus:ring-dusty-medium bg ivory focus:border-dusty-medium text-sm"
                     />
                 </div>
                 <div>
@@ -73,7 +73,7 @@ export default function SignupPage() {
                         required
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 text-sm"
+                        className="mt-1 block w-full px-3 py-2 bg-ivory-pure border border-dusty-light/40 rounded-lg shadow-sm text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-dusty-medium focus:ring-1 focus:ring-dusty-medium transition"
                     />
                 </div>
                 <div>
@@ -83,7 +83,7 @@ export default function SignupPage() {
                         required
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
-                        className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 text-sm"
+                        className="mt-1 block w-full px-3 py-2 border border-dusty-light/30 rounded-lg shadow-sm focus:outline-none focus:ring-1 focus:ring-dusty-medium focus:border-dusty-medium text-sm"
                     />
                 </div>
                 <div>
@@ -91,7 +91,7 @@ export default function SignupPage() {
                     <select
                         value={role}
                         onChange={(e) => setRole(e.target.value)}
-                        className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 text-sm bg-white"
+                        className="mt-1 block w-full px-3 py-2 border border-dusty-light/30 rounded-lg shadow-sm focus:outline-none focus:ring-1 focus:ring-dusty-medium bg-ivory focus:border-dusty-light/30 text-sm bg-white"
                     >
                         <option value="PARENT">Parent / Guardian</option>
                         <option value="TEACHER">Independent Teacher / Tutor</option>
@@ -100,14 +100,14 @@ export default function SignupPage() {
                 <button
                     type="submit"
                     disabled={loading}
-                    className="w-full py-2.5 px-4 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg shadow-sm transition disabled:opacity-50"
+                    className="w-full py-2.5 px-4 text-sm font-semibold text-white bg-dusty-medium hover:bg-dusty-dark rounded-lg shadow-sm transition disabled:opacity-50"
                 >
                     {loading ? 'Creating Account...' : 'Sign Up'}
                 </button>
             </form>
 
             <p className="text-center text-sm text-gray-500">
-                Already have an account? <Link href="/login" className="font-semibold text-indigo-600 hover:text-indigo-500">Sign in</Link>
+                Already have an account? <Link href="/login" className="font-semibold text-dusty-medium hover:text-dusty-dark">Sign in</Link>
             </p>
         </div>
     );

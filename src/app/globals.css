@@ -1,26 +1,21 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  /* Map Tailwind utilities to Next.js font variables */
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-serif), ui-serif, Georgia, Cambria, serif;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Dusty Blue Shades */
+  --color-dusty-light: #b0c4de;
+  --color-dusty-medium: #6082b6;
+  --color-dusty-dark: #2e4f73;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+  /* Peach Shades */
+  --color-peach-light: #ffdab9;
+  --color-peach-medium: #f8a488;
+  --color-peach-dark: #df8a69;
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Ivory Shades */
+  --color-ivory: #f9f6ee;
+  --color-ivory-pure: #fffff0;
 }
