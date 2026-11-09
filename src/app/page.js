@@ -32,7 +32,7 @@ export default function HomePage() {
           Manage lessons, track attendance, organize student portfolios, and submit assignments effortlessly—all in one beautifully synchronized family space.
         </p>
         <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-16">
-          <Link href="/signup" className="px-8 py-3 text-base font-semibold text-ivory-pure bg-gradient-to-r from-dusty-medium to-peach-medium hover:from-dusty-dark hover:to-peach-dark rounded-xl shadow-md transition transform hover:-translate-y-0.5">
+          <Link href="/signup" className="px-8 py-3 text-base font-semibold text-white bg-gradient-to-r from-dusty-medium to-peach-medium hover:from-dusty-dark hover:to-peach-dark rounded-xl shadow-md transition transform hover:-translate-y-0.5">
             Create Household Account
           </Link>
           <Link href="/login" className="px-8 py-3 text-base font-semibold text-gray-700 bg-ivory-pure hover:bg-ivory bg-ivory-pure border border-dusty-light/30 rounded-xl shadow-sm transition transform hover:-translate-y-0.5">

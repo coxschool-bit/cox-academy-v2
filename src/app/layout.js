@@ -17,7 +17,7 @@ const libreBaskerville = Libre_Baskerville({
 });
 
 export const metadata = {
-  title: 'Cox Academy',
+  title: 'Cox Homeschool Academy',
   description: 'A beautiful, secure homeschool tracking platform.',
 };
 

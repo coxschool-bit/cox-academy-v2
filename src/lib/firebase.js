@@ -23,7 +23,7 @@ if (process.env.NODE_ENV === 'development') {
     if (!global.EMULATORS_STARTED) {
         global.EMULATORS_STARTED = true;
         connectAuthEmulator(auth, 'http://127.0.0.1:9099', { disableWarnings: true });
-        connectFirestoreEmulator(db, '127.0.0.1', 8080);
+        connectFirestoreEmulator(db, '127.0.0.1', 8085);
         connectStorageEmulator(storage, '127.0.0.1', 9199);
         console.log("Connected successfully to local Firebase Emulators!");
     }
